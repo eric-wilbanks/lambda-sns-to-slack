@@ -1,0 +1,38 @@
+{
+  "arn:aws:sns:us-west-2:01234567890123:first-sample-sns-topic": {
+    "channel": "#sns-to-slack-testing",
+    "searches": {
+      "DB instance shutdown": {
+        "mention": [
+          "@SLACK_USER"
+        ],
+        "variable": "sns.message.Event Message"
+      },
+      "Database instance patched": {
+        "mention": [
+          "@SLACK_USER"
+        ],
+        "variable": "sns.message.Event Message"
+      },
+      "Failed": {
+        "mention": [
+          "@SLACK_USER"
+        ],
+        "variable": "sns.message.Event Message"
+      },
+      "Your database contains invalid objects": {
+        "mention": [
+          "@OTHER_SLACK_USER"
+        ],
+        "variable": "sns.message.Event Message"
+      }
+    }
+  },
+  "arn:aws:sns:us-west-2:01234567890123:second-sample-sns-topic": {
+    "channel": "#sns-to-slack-testing"
+  },
+  "defaults": {
+    "channel": "#sns-to-slack-testing",
+    "searches": {}
+  }
+}
